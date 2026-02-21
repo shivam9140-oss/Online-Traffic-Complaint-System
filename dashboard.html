@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+
+    <div class="sidebar">
+        <h2>🚦 Traffic System</h2>
+        <a href="#">Dashboard</a>
+        <a href="#">File Complaint</a>
+        <a href="#">Track Status</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Welcome, {{ user }}</h1>
+        <p>This is your dashboard. From here you can manage traffic complaints.</p>
+
+        <div class="cards">
+            <div class="card-box">
+                <h3>File Complaint</h3>
+                <p>Report traffic violations easily.</p>
+            </div>
+
+            <div class="card-box">
+                <h3>Track Complaint</h3>
+                <p>Check status of submitted complaints.</p>
+            </div>
+
+            <div class="card-box">
+                <h3>Profile</h3>
+                <p>Manage your account details.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
