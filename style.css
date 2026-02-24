@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+/* ========== GLOBAL RESET ========== */
 * {
     margin: 0;
     padding: 0;
@@ -6,113 +6,171 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* ===== BODY ===== */
+/* ========== BODY BACKGROUND ========== */
 body {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #333;
 }
 
-/* ===== CENTER ===== */
-.container-centered {
+/* ========== CENTER WRAPPER ========== */
+.page-wrapper,
+.container-centered,
+.home-container {
     width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ===== CARD ===== */
+/* ========== CARD COMMON STYLE ========== */
+.home-card,
 .auth-card {
     background: #ffffff;
-    width: 380px;
-    padding: 30px 25px;
-    border-radius: 12px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    width: 420px;
+    padding: 35px 40px;
+    border-radius: 14px;
     text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
-/* ===== HEADINGS ===== */
+/* ========== HEADINGS ========== */
+.home-card h1,
+.auth-card h1,
 .auth-card h2 {
-    color: #0f2027;
-    margin-bottom: 8px;
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #102a43;
 }
 
-.subtitle {
+.subtitle,
+.description,
+.auth-card p {
     font-size: 14px;
     color: #555;
     margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-/* ===== FORM ===== */
-form {
-    text-align: left;
+/* ========== BUTTONS ========== */
+.buttons {
+    margin-top: 20px;
 }
 
-/* ===== LABEL ===== */
-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    display: block;
-    margin: 12px 0 5px;
-}
-
-/* ===== INPUT ===== */
-input {
-    width: 100%;
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    outline: none;
-    transition: 0.3s;
-}
-
-input:focus {
-    border-color: #2c5364;
-}
-
-/* ===== BUTTON ===== */
 .btn {
-    width: 100%;
-    margin-top: 18px;
-    padding: 12px;
-    background: #2c5364;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    border: none;
+    display: inline-block;
+    background: #1e88e5;
+    color: #fff;
+    padding: 10px 24px;
     border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border: none;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .btn:hover {
-    background: #0f2027;
+    background: #1565c0;
 }
 
-/* ===== LINKS ===== */
-.switch-link {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #444;
-}
-
-.switch-link a {
-    color: #2c5364;
-    font-weight: 600;
+.btn-outline {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 9px 22px;
+    border-radius: 6px;
+    border: 2px solid #1e88e5;
+    color: #1e88e5;
     text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease;
 }
 
-.switch-link a:hover {
+.btn-outline:hover {
+    background: #1e88e5;
+    color: #fff;
+}
+
+/* ========== FORM STYLE (LOGIN & REGISTER) ========== */
+.auth-form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.auth-form label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    display: block;
+    color: #333;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #1e88e5;
+}
+
+/* ========== ABOUT SECTION (HOME PAGE) ========== */
+.about {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.about h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #102a43;
+}
+
+.about p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ========== LINKS ========== */
+.switch-link,
+.small-text {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.switch-link a,
+.small-text a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.switch-link a:hover,
+.small-text a:hover {
     text-decoration: underline;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 420px) {
+/* ========== RESPONSIVE (MOBILE) ========== */
+@media (max-width: 480px) {
+    .home-card,
     .auth-card {
         width: 90%;
+        padding: 25px;
+    }
+
+    .home-card h1,
+    .auth-card h1,
+    .auth-card h2 {
+        font-size: 22px;
     }
 }
