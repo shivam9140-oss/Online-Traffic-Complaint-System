@@ -1,111 +1,107 @@
-/* ===== RESET DEFAULT BROWSER STYLES ===== */
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* ===== BODY BACKGROUND ===== */
+/* ===== BODY ===== */
 body {
     height: 100vh;
-    background: linear-gradient(135deg, #1d2671, #c33764);
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ===== PAGE WRAPPER ===== */
-.page-wrapper {
+/* ===== CENTER ===== */
+.container-centered {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ===== LOGIN CARD ===== */
+/* ===== CARD ===== */
 .auth-card {
     background: #ffffff;
     width: 380px;
     padding: 30px 25px;
     border-radius: 12px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
     text-align: center;
 }
 
-/* ===== HEADING ===== */
-.auth-card h1 {
-    font-size: 22px;
-    color: #1d2671;
-    margin-bottom: 10px;
+/* ===== HEADINGS ===== */
+.auth-card h2 {
+    color: #0f2027;
+    margin-bottom: 8px;
 }
 
-/* ===== SUBTITLE ===== */
 .subtitle {
     font-size: 14px;
     color: #555;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 /* ===== FORM ===== */
-.auth-form {
+form {
     text-align: left;
 }
 
 /* ===== LABEL ===== */
-.auth-form label {
+label {
     font-size: 14px;
     font-weight: 600;
     color: #333;
-    margin-bottom: 6px;
     display: block;
+    margin: 12px 0 5px;
 }
 
-/* ===== INPUT FIELDS ===== */
-.auth-form input {
+/* ===== INPUT ===== */
+input {
     width: 100%;
     padding: 10px 12px;
-    margin-bottom: 18px;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 14px;
     outline: none;
-    transition: border-color 0.3s;
+    transition: 0.3s;
 }
 
-/* INPUT FOCUS EFFECT */
-.auth-form input:focus {
-    border-color: #1d2671;
+input:focus {
+    border-color: #2c5364;
 }
 
-/* ===== LOGIN BUTTON ===== */
+/* ===== BUTTON ===== */
 .btn {
     width: 100%;
+    margin-top: 18px;
     padding: 12px;
-    background: #1d2671;
-    color: #fff;
+    background: #2c5364;
+    color: white;
     font-size: 15px;
     font-weight: bold;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: 0.3s;
 }
 
-/* BUTTON HOVER */
 .btn:hover {
-    background: #c33764;
+    background: #0f2027;
 }
 
-/* ===== REGISTER LINK ===== */
+/* ===== LINKS ===== */
 .switch-link {
-    margin-top: 18px;
+    margin-top: 15px;
     font-size: 14px;
     color: #444;
 }
 
 .switch-link a {
-    color: #1d2671;
+    color: #2c5364;
     font-weight: 600;
     text-decoration: none;
 }
@@ -114,7 +110,7 @@ body {
     text-decoration: underline;
 }
 
-/* ===== RESPONSIVE (MOBILE) ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 420px) {
     .auth-card {
         width: 90%;
