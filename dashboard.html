@@ -42,3 +42,45 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Traffic Complaint System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="dashboard-wrapper">
+    <aside class="sidebar">
+        <h2>🚦 Traffic System</h2>
+        <a href="/dashboard">Dashboard</a>
+        <a href="#">File Complaint</a>
+        <a href="#">Track Status</a>
+        <a href="/logout">Logout</a>
+    </aside>
+
+    <main class="main-content">
+        <h1>Welcome, {{ user }}</h1>
+        <p>Use your dashboard to report incidents and monitor action taken by authorities.</p>
+
+        <section class="cards">
+            <article class="card-box">
+                <h3>File Complaint</h3>
+                <p>Submit violation details with place, time, and evidence.</p>
+            </article>
+
+            <article class="card-box">
+                <h3>Track Complaint</h3>
+                <p>Review status updates and resolution progress.</p>
+            </article>
+
+            <article class="card-box">
+                <h3>Profile</h3>
+                <p>Manage your account credentials and preferences.</p>
+            </article>
+        </section>
+    </main>
+</div>
+</body>
+</html>
